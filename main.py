@@ -2,11 +2,18 @@ from fastapi import FastAPI
 
 app = FastAPI()
 
-@app.get('/msg')
-async def mensagem():
-    return {'msg': 'FastAPI na Geek Universityss'}
-
-
+cursos = {
+    1: {
+        "titulo": "Programação para leigos",
+        "aulas": 112,
+        "horas": 67,
+    },
+    2: {
+        "titulo": "Algoritmos e lógicas de programação",
+        "aulas": 67,
+        "horas": 47,
+    },
+}
 if __name__ == '__main__':
     import uvicorn
 
